@@ -1,130 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>Heart Bong...</title>
-	<style>
-/*		html, body {
-			height: 100%;
-		}
-
-		body {
-			margin: 0;
-			padding: 0;
-		}
-
-		.heart {
-			width: 220px;
-			height: 500px;
-			margin: 40px auto;
-			position: relative;
-		}
-
-		.left, .right, .bottom {
-			display: block;
-			width: 220px;
-			height: 220px;
-			position: absolute;
-			background-color: red;
-			animation: beat 0.7s infinite;
-
-		}
-
-		.left, .right {
-			border-radius: 110px;
-		}
-
-		.left {
-			z-index: 3;
-			left: -80px;
-		}
-
-		.right {
-			z-index: 2;
-			right: -80px;
-		}
-
-		.bottom {
-			z-index: 1;
-			top: 80px;
-			transform: rotate(225deg);
-		}
-
-		@keyframes beat {
-			0% {
-				transform: rotate(225deg) scale(1);
-			}
-
-			50% {
-				transform: rotate(225deg) scale(1.1);
-			}
-
-			100% {
-				transform: scale(1) rotate(225deg);
-			}
-		}*/
-
-		.heart {
-			width: 200px;
-			height: 200px;
-			margin: 100px auto;
-			position: relative;
-		}
-
-		.left {
-			width: 200px;
-			height: 200px;
-			background-color: red;
-			position: absolute;
-			left: -70px;
-		}
-
-		.right {
-			width: 200px;
-			height: 200px;
-			background-color: red;
-			position: absolute;
-			right: -94px;
-		}
-
-		.bottom {
-			width: 200px;
-			height: 200px;
-			background-color: red;
-			position: absolute;
-			bottom: -80px;
-			left: 12px;
-		}
-
-		.left, .right {
-			border-radius: 100px;
-		}
-
-		.left, .right, .bottom {
-			animation: move 1s infinite;
-		}
-
-		@keyframes move {
-			0% {
-				transform: scale(1) rotate(45deg);
-			}
-
-			50% {
-				transform: scale(1.2) rotate(45deg);
-			}
-
-			100% {
-				transform: scale(1) rotate(45deg);
-			}
-		}
-
-	</style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1" />
+    <title>智能小医</title>
+    <link rel="stylesheet" href="https://robot-lib.cdn.kangfuzi.com/sdk/assets/css/index.css" />
 </head>
+
 <body>
-	<div class="heart">
-		<span class="left"></span>
-		<span class="right"></span>
-		<span class="bottom"></span>
-	</div>
+    <div id="container">
+
+    </div>
+    <script src="https://robot-lib.cdn.kangfuzi.com/sdk/znxy.js"></script>
+    <script>
+        new ZNXY.Diagnose({
+            app_id: '5acb5d7abea7c06caf241b8a',
+            autorender:true,
+            api: '',
+            init: {
+                param1: '',
+                param2: ''
+            },
+            autoscroll: {
+                offsetY: 100,
+                duration: 1000
+            },
+            view: {
+                user_photo: '',
+                robot_photo: ''
+            },
+            style: {
+                theme: 'green',
+                background: '#999',
+                question: {
+                    background: 'blue',
+                    bubble: {
+                        background: 'pink',
+                        radius: '5px 10px 20px 4px',
+                        color: 'green'
+                    },
+                    input: {
+                        borderColor: 'red'
+                    }
+                },
+                answer: {
+                    background: 'gold',
+                    bubble: {
+                        background: 'yellow',
+                        radius: '9px 2px 3px 13px',
+                        color: 'cyan'
+                    }
+                },
+                photo: {
+                    size: '60px',
+                    radius: '3px'
+                },
+                button: {
+                    background: 'red',
+                    color: 'white'
+                },
+                operation: {
+                    background: 'orange',
+                    color: 'brown'
+                }
+            }
+        }).start();
+    </script>
 </body>
+
 </html>
