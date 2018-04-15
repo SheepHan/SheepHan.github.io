@@ -16,3 +16,13 @@
     background-attachment: fixed;
     background-size: 100%; */
 }
+.znxy-views .znxy-results-view-overall .znxy-results-result-item{
+    color: #666 !important;
+}
+
+.znxy-results-result-footer .znxy-results-result-link{
+    visibility: hidden !important;
+}
+.znxy-results-result-footer {
+    background-color: #fff !important;
+}
