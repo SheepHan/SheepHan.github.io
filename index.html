@@ -5,7 +5,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1" />
     <title>小肥羊智能导诊</title>
-    <link rel="stylesheet" href="https://robot-lib.cdn.kangfuzi.com/sdk/assets/css/index.css" />
+    <!-- <link rel="stylesheet" href="https://robot-lib.cdn.kangfuzi.com/sdk/assets/css/index.css" /> -->
+    <link rel="stylesheet" href="https://robot-lib.cdn.kangfuzi.com/sdk/assets/css/znxy-1.1.0.css" />
+    <link rel="stylesheet" href="./csss/main.css" />
 </head>
 
 <body>
@@ -66,7 +68,10 @@
                     color: '#5D67A4'
                 }
             }
-        }).start();
+        }).start(function( diagnose ) {
+    console.log( this === diagnose ); // output true
+    console.log( this.questions ); // output [ question ]
+} );
     </script>
 </body>
 
