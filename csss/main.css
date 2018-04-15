@@ -1,9 +1,18 @@
-.znxy-questions-photo img{
-    /* background-image: url(../img/doctor.png) */
-    background-color: #d62323;
+.znxy-questions-photo img {
+    background-image: url(../img/doctor.png);
+    /* background-color: #d62323; */
+    /* background-image: url(1.jpg); */
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%; */
 }
 
-.znxy-answers-photo img{
-    /* background-image: url(../img/Person.png) */
-    background-color: #641691;
+.znxy-answers-photo img {
+    background-image: url(../img/Person.png) !important;
+    /* background-color: #641691; */
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%; */
 }
