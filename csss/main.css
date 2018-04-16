@@ -1,3 +1,13 @@
+.head{
+    background: #d34d31;
+    height: 50px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 199;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
 .znxy-questions-photo img {
     background-image: url(../img/doctor.png);
     /* background-color: #d62323; */
@@ -53,7 +63,7 @@
 
 .znxy-views .znxy-questions-modify {
     color: #fff !important;
-    background:#d44d44 !important;
+    background:#d34d31 !important;
     border-radius: 3px !important;
 }
 .znxy-views .znxy-questions-cancel {
@@ -62,15 +72,14 @@
     border-radius: 3px !important;
 }
 .znxy-views * {
-    font-size: 16px;
+    font-size: 16px !important;
 }
 .znxy-views .znxy-results-view-overall .znxy-results-statement {
-    font-size: 16px;
+    font-size: 16px !important;
 }
 
 .znxy-views {
     background: #f2f2f2;
     margin: 0;
-    padding: 6px;
-    border-radius: 3px;
+    padding: 6px !important;
 }

@@ -13,14 +13,14 @@
 </head>
 
 <body>
-    <div id="container">
-
+    <div class="head">
     </div>
+
     <script src="https://robot-lib.cdn.kangfuzi.com/sdk/znxy.js"></script>
     <script>
         new ZNXY.Diagnose({
             app_id: '5acb5d7abea7c06caf241b8a',
-            autorender:2,
+            autorender: 2,
             api: '',
             init: {
                 param1: '',
@@ -31,12 +31,12 @@
                 duration: 1000
             },
             view: {
-                container:'',
+                container: '',
                 user_photo: '',
                 robot_photo: ''
             },
             style: {
-                theme: '#d44d44',
+                theme: '#d34d31',
                 background: '#F2F2F2',
                 question: {
                     background: '#FFFFFF',
@@ -62,20 +62,20 @@
                     radius: '50%'
                 },
                 button: {
-                    background: '#d44d44',
+                    background: '#d34d31',
                     color: '#FFFFFF	'
                 },
                 operation: {
                     background: '#FFFFFF',
-                    color: '#d44d44'
+                    color: '#d34d31'
                 }
             }
-        }).start(function( diagnose ) {
-    console.log( this === diagnose ); // output true
-    console.log( this.questions ); // output [ question ]
-} );
+        }).start(function (diagnose) {
+            console.log(this === diagnose); // output true
+            console.log(this.questions); // output [ question ]
+        });
     </script>
-    
+
 </body>
 
 </html>
