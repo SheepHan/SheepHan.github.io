@@ -51,3 +51,7 @@
     border-color: #bfbfbf !important;
     color: #fff !important;
 }
+
+.znxy-ui-formitem-radio input[type=radio]:checked+i {
+    background: #d44d44;
+}
