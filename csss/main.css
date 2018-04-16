@@ -61,3 +61,9 @@
     background:#5079d9 !important;
     border-radius: 3px !important;
 }
+.znxy-views * {
+    font-size: 16px;
+}
+.znxy-views .znxy-results-view-overall .znxy-results-statement {
+    font-size: 16px;
+}
