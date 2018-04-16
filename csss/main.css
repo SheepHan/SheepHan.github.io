@@ -52,5 +52,7 @@
 }
 
 .znxy-views .znxy-questions-modify {
-    border-radius: 3px;
+    color: #fff !important;
+    background:#d44d44 !important;
+    border-radius: 3px !important;
 }
