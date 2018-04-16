@@ -39,3 +39,15 @@
     min-width: 80%;
     padding: 8px 12px;
 }
+
+.znxy-views .znxy-questions-submit-button:disabled {
+    border-color: #bfbfbf !important;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.15);
+    background:#b3b3b3;
+    color: #fff !important;
+}
+
+.znxy-views .znxy-questions-view[disabled="1"] .znxy-questions-form * button {
+    border-color: #bfbfbf !important;
+    color: #fff !important;
+}
