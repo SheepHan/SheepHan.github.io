@@ -27,3 +27,15 @@
 .znxy-results-result-footer {
     background-color: #fff !important;
 }
+
+.znxy-views .znxy-questions-view textarea{
+    padding:0px;
+}
+.znxy-views .znxy-questions-view textarea{
+    padding:8px 0px;
+}
+
+.znxy-views .znxy-questions-submit-button{
+    min-width: 80%;
+    padding: 8px 12px;
+}
