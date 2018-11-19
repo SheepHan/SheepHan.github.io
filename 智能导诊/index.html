@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1" />
+    <title>小肥羊智能导诊</title>
+    <link rel="icon shortcut bookmark" type="img/png" href="./img/hospital.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./img/hospital_mark.png">
+    <!-- <link rel="stylesheet" href="https://robot-lib.cdn.kangfuzi.com/sdk/assets/css/index.css" /> -->
+    <link rel="stylesheet" href="https://robot-lib.cdn.kangfuzi.com/sdk/assets/css/znxy-1.1.0.css" />
+    <link rel="stylesheet" href="./csss/main.css" />
+</head>
+
+<body>
+    <div class="head">
+      智能导诊系统
+    </div>
+    <div class="blank">
+     </div>
+    <script src="https://robot-lib.cdn.kangfuzi.com/sdk/znxy.js"></script>
+    <script>
+        new ZNXY.Diagnose({
+            app_id: '5acb5d7abea7c06caf241b8a',
+            autorender: 2,
+            api: '',
+            init: {
+                param1: '',
+                param2: ''
+            },
+            autoscroll: {
+                offsetY: 100,
+                duration: 1000
+            },
+            view: {
+                container: '',
+                user_photo: '',
+                robot_photo: ''
+            },
+            style: {
+                theme: '#d34d31',
+                background: '#F2F2F2',
+                question: {
+                    background: '#FFFFFF',
+                    bubble: {
+                        background: '#FFFFFF',
+                        radius: '5px',
+                        color: '#666'
+                    },
+                    input: {
+                        borderColor: '#C0CCDA'
+                    }
+                },
+                answer: {
+                    background: '#FFFFFF',
+                    bubble: {
+                        background: '#5079d9',
+                        radius: '5px',
+                        color: '#FFFFFF'
+                    }
+                },
+                photo: {
+                    size: '39px',
+                    radius: '50%'
+                },
+                button: {
+                    background: '#d34d31',
+                    color: '#FFFFFF	'
+                },
+                operation: {
+                    background: '#FFFFFF',
+                    color: '#d34d31'
+                }
+            }
+        }).start(function (diagnose) {
+            console.log(this === diagnose); // output true
+            console.log(this.questions); // output [ question ]
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>天气预报</title>
+</head>
+<style>
+	table{
+		margin: 70px auto;
+	}
+	input,button{
+		display: block;
+		margin: 30px auto;
+	}
+</style>
+<body>
+<input type="text" id="search" placeholder="请输入需要查询的城市"/><button id="submit">查询</button>
+	<table id='show'></table>
+</body>
+</html>
+<script type="text/javascript" src='js/jquery.min.js'></script>
+
+<!-- 导入模版引擎 -->
+<script type="text/javascript" src='js/template-native.js'></script>
+
+<!-- 导入模版 -->
+<script type="text/template" id='template'>
+	<tr>
+		<td>城市：<%=currentCity%></td>
+		<td>PM2.5：<%=pm25%></td>
+	</tr>
+	<%for(var i=0;i<weather_data.length;i++){%>
+		<tr>
+			<td><%= weather_data[i].date%></td>
+			<td><img src="<%=weather_data[i].dayPictureUrl%>" alt=""></td>
+			<td><img src="<%= weather_data[i].nightPictureUrl%>" alt="" /></td>
+			<td><%= weather_data[i].temperature%></td>
+			<td><%= weather_data[i].weather%></td>
+			<td><%= weather_data[i].wind%></td>
+		</tr>
+	<%}%>
+</script>
+
+
+<script>
+	$(function(){
+			$("#submit").on("click",function(){
+				$('#show').empty();//每次点击查询时候清空历史table记录
+				
+				var city=$("#search").val();
+				if(city){
+					$.ajax({
+					url:"http://api.map.baidu.com/telematics/v3/weather?location="+city+"	&output=json&ak=0A5bc3c4fb543c8f9bc54b77bc155724",
+					dataType:'jsonp',
+					success:function(data){
+						console.log(data);
+						var obj=data.results[0];
+						var str=template('template',obj);
+						$('#show').append(str);
+
+				}
+
+			})
+				}
+		
+			})
+		
+	
+	})
+</script>
+
+
+
+
+
